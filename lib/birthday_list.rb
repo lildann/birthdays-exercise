@@ -10,20 +10,10 @@ class BirthdayList
   end
 
   def see_birthdays
-    @birthdays.each { |birthday| puts "#{birthday.name}: #{birthday.date}"}
+    @birthdays.each { |birthday| puts birthday.display }
   end
 
   def check_birthday
-    @birthdays.each do |birthday|
-      if today == birthday.date[0..4]
-        puts "It's #{birthday.name}'s birthday today! They are #{birthday.calculate_age} years old!"
-      end
-    end
-  end
-
-  private
-
-  def today
-    Time.now.strftime("%d/%m")
+    @birthdays.each { |birthday| puts birthday.message if birthday.today? }
   end
 end

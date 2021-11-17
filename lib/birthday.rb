@@ -6,10 +6,22 @@ class Birthday
     @date = date
   end
 
+  def display
+    "#{@name}: #{@date}"
+  end
+
   def calculate_age
     age = today.year - dob_year
     age -= 1 if today.month < dob_month || (today.month == dob_month && today.day < dob_day)
     age
+  end
+
+  def today?
+    today == @date[0..4]
+  end
+
+  def message
+    "It's #{@name}'s birthday today! They are #{calculate_age} years old!" if today?
   end
 
   private
