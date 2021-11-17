@@ -38,6 +38,4 @@ describe BirthdayList do
     birthday_list.store_birthday(my_birthday)
     expect { birthday_list.check_birthday }.not_to output.to_stdout
   end
-
-  
 end
