@@ -1,7 +1,6 @@
 require 'birthday'
 
-describe Birthday do
-
+describe Birthday do 
   it "#display returns the person's name and birthday" do
     my_birthday = Birthday.new('Lilly', '01/03/1989')
     expect(my_birthday.display).to eq('Lilly: 01/03/1989')

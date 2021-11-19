@@ -10,10 +10,10 @@ class BirthdayList
   end
 
   def see_birthdays
-    @birthdays.each { |birthday| puts birthday.display }
+    @birthdays.each { |birthday| puts "#{birthday.display}" }
   end
 
   def check_birthday
-    @birthdays.each { |birthday| puts birthday.message if birthday.today? }
+    @birthdays.each { |birthday| puts "#{birthday.message}" if birthday.today? }
   end
 end

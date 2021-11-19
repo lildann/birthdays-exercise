@@ -17,7 +17,7 @@ class Birthday
   end
 
   def today?
-    today == @date[0..4]
+    today.day == dob_day && today.month == dob_month
   end
 
   def message
