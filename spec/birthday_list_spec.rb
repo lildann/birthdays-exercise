@@ -34,6 +34,6 @@ describe BirthdayList do
     Timecop.freeze(Time.local(2021, 11, 17))
     allow(my_birthday).to receive_messages(today?: false)
     birthday_list.store_birthday(my_birthday)
-    expect { birthday_list.check_birthday }.not_to output.to_stdout
+    expect { birthday_list.check_birthday }.not_to output(my_birthday).to_stdout
   end
 end

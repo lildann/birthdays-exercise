@@ -16,7 +16,7 @@ describe 'Birthdays feature test' do
   end
 
   it '#check_birthdays should work as a program' do
-    Timecop.freeze(Time.local(2021, 03, 01))
+    Timecop.freeze(Time.local(2021, 3, 1))
     birthday_list.store_birthday(harry_birthday)
     birthday_list.store_birthday(hermione_birthday)
     birthday_list.store_birthday(ron_birthday)
